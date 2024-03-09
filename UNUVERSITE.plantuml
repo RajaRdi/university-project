@@ -1,0 +1,42 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class Etudiant
+class Faculte
+class Filiere
+class InscriptionModule
+class InscriptionSemestre
+class Module
+class NoteModule
+class NoteSemestre
+class Semestre
+class SemestreModule
+class Universite
+
+Etudiant            "1" *-[#595959,plain]-> "faculte\n1" Faculte             
+Etudiant            "1" *-[#595959,plain]-> "filieres\n*" Filiere             
+Etudiant            "1" *-[#595959,plain]-> "inscriptionSemestres\n*" InscriptionSemestre 
+Etudiant            "1" *-[#595959,plain]-> "noteSemestres\n*" NoteSemestre        
+Etudiant            "1" *-[#595959,plain]-> "semestres\n*" Semestre            
+Faculte             "1" *-[#595959,plain]-> "etudiants\n*" Etudiant            
+Faculte             "1" *-[#595959,plain]-> "nomUniversite\n1" Universite          
+Filiere             "1" *-[#595959,plain]-> "etudiants\n*" Etudiant            
+Filiere             "1" *-[#595959,plain]-> "faculte\n1" Faculte             
+Filiere             "1" *-[#595959,plain]-> "inscriptionSemestres\n*" InscriptionSemestre 
+InscriptionModule   "1" *-[#595959,plain]-> "inscriptionSemestre\n1" InscriptionSemestre 
+InscriptionModule   "1" *-[#595959,plain]-> "modules\n*" Module              
+InscriptionSemestre "1" *-[#595959,plain]-> "etudiants\n*" Etudiant            
+InscriptionSemestre "1" *-[#595959,plain]-> "filieres\n*" Filiere             
+InscriptionSemestre "1" *-[#595959,plain]-> "semestres\n*" Semestre            
+NoteModule          "1" *-[#595959,plain]-> "module\n1" Module              
+NoteModule          "1" *-[#595959,plain]-> "noteSemestre\n1" NoteSemestre        
+NoteSemestre        "1" *-[#595959,plain]-> "etudiants\n*" Etudiant            
+NoteSemestre        "1" *-[#595959,plain]-> "filiere\n1" Filiere             
+NoteSemestre        "1" *-[#595959,plain]-> "semestre\n1" Semestre            
+Semestre            "1" *-[#595959,plain]-> "inscriptionSemestre\n1" InscriptionSemestre 
+Semestre            "1" *-[#595959,plain]-> "noteSemestre\n1" NoteSemestre        
+Universite          "1" *-[#595959,plain]-> "Faculte\n*" Faculte             
+@enduml

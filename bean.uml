@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>ma.fst.universite.bean</OriginalElement>
+  <nodes>
+    <node x="227.0" y="394.0">ma.fst.universite.bean.Module</node>
+    <node x="227.0" y="346.0">ma.fst.universite.bean.SemestreModule</node>
+    <node x="-196.75" y="44.0">ma.fst.universite.bean.Faculte</node>
+    <node x="-30.25" y="102.0">ma.fst.universite.bean.Filiere</node>
+    <node x="-198.75" y="180.0">ma.fst.universite.bean.Etudiant</node>
+    <node x="-245.0" y="492.0">ma.fst.universite.bean.InscriptionSemestre</node>
+    <node x="-78.5" y="560.0">ma.fst.universite.bean.InscriptionModule</node>
+    <node x="139.5" y="560.0">ma.fst.universite.bean.NoteModule</node>
+    <node x="-98.25" y="346.0">ma.fst.universite.bean.Semestre</node>
+    <node x="-78.25" y="253.0">ma.fst.universite.bean.NoteSemestre</node>
+    <node x="-214.0" y="-14.0">ma.fst.universite.bean.Universite</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ma.fst.universite.bean.Etudiant" target="ma.fst.universite.bean.InscriptionSemestre" relationship="TO_MANY">
+      <point x="-28.5" y="14.0" />
+      <point x="-170.25" y="238.0" />
+      <point x="-233.75" y="238.0" />
+      <point x="-233.75" y="326.0" />
+      <point x="41.75" y="326.0" />
+      <point x="41.75" y="477.0" />
+      <point x="-91.25" y="477.0" />
+      <point x="51.25" y="-14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.InscriptionSemestre" target="ma.fst.universite.bean.Etudiant" relationship="TO_MANY">
+      <point x="-51.25" y="-14.0" />
+      <point x="-193.75" y="482.0" />
+      <point x="-133.75" y="482.0" />
+      <point x="-133.75" y="467.0" />
+      <point x="-113.25" y="467.0" />
+      <point x="28.5" y="14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.Semestre" target="ma.fst.universite.bean.InscriptionSemestre" relationship="TO_ONE">
+      <point x="31.25" y="14.0" />
+      <point x="-4.5" y="418.0" />
+      <point x="41.75" y="418.0" />
+      <point x="41.75" y="477.0" />
+      <point x="-91.25" y="477.0" />
+      <point x="51.25" y="-14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.Faculte" target="ma.fst.universite.bean.Etudiant" relationship="TO_MANY">
+      <point x="-26.5" y="14.0" />
+      <point x="-28.5" y="-14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.InscriptionSemestre" target="ma.fst.universite.bean.Semestre" relationship="TO_MANY">
+      <point x="-51.25" y="-14.0" />
+      <point x="-193.75" y="482.0" />
+      <point x="-133.75" y="482.0" />
+      <point x="-133.75" y="398.0" />
+      <point x="-67.0" y="398.0" />
+      <point x="-31.25" y="14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.NoteModule" target="ma.fst.universite.bean.Module" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="212.0" y="540.0" />
+      <point x="-25.0" y="540.0" />
+      <point x="-25.0" y="437.0" />
+      <point x="281.0" y="437.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.Etudiant" target="ma.fst.universite.bean.Semestre" relationship="TO_MANY">
+      <point x="-28.5" y="14.0" />
+      <point x="-170.25" y="238.0" />
+      <point x="-93.25" y="238.0" />
+      <point x="-93.25" y="291.0" />
+      <point x="-67.0" y="291.0" />
+      <point x="-31.25" y="-14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.Semestre" target="ma.fst.universite.bean.NoteSemestre" relationship="TO_ONE">
+      <point x="31.25" y="-14.0" />
+      <point x="-4.5" y="336.0" />
+      <point x="82.25" y="336.0" />
+      <point x="82.25" y="296.0" />
+      <point x="43.25" y="296.0" />
+      <point x="40.5" y="14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.NoteSemestre" target="ma.fst.universite.bean.Semestre" relationship="TO_ONE">
+      <point x="-40.5" y="14.0" />
+      <point x="-37.75" y="291.0" />
+      <point x="-67.0" y="291.0" />
+      <point x="-31.25" y="-14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.Etudiant" target="ma.fst.universite.bean.NoteSemestre" relationship="TO_MANY">
+      <point x="-28.5" y="14.0" />
+      <point x="-170.25" y="238.0" />
+      <point x="-37.75" y="238.0" />
+      <point x="-40.5" y="-14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.NoteSemestre" target="ma.fst.universite.bean.Etudiant" relationship="TO_MANY">
+      <point x="40.5" y="-14.0" />
+      <point x="43.25" y="228.0" />
+      <point x="-113.25" y="228.0" />
+      <point x="28.5" y="14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.NoteSemestre" target="ma.fst.universite.bean.Filiere" relationship="TO_ONE">
+      <point x="40.5" y="-14.0" />
+      <point x="24.5" y="14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.InscriptionModule" target="ma.fst.universite.bean.Module" relationship="TO_MANY">
+      <point x="0.0" y="-14.0" />
+      <point x="15.5" y="550.0" />
+      <point x="-5.0" y="550.0" />
+      <point x="-5.0" y="447.0" />
+      <point x="-25.0" y="447.0" />
+      <point x="-25.0" y="437.0" />
+      <point x="281.0" y="437.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.Filiere" target="ma.fst.universite.bean.Faculte" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="18.75" y="92.0" />
+      <point x="-117.25" y="92.0" />
+      <point x="26.5" y="14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.Faculte" target="ma.fst.universite.bean.Universite" relationship="TO_ONE">
+      <point x="-26.5" y="-14.0" />
+      <point x="-170.25" y="34.0" />
+      <point x="-181.75" y="34.0" />
+      <point x="-32.25" y="14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.InscriptionModule" target="ma.fst.universite.bean.InscriptionSemestre" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="15.5" y="550.0" />
+      <point x="-142.5" y="550.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.Universite" target="ma.fst.universite.bean.Faculte" relationship="TO_MANY">
+      <point x="32.25" y="14.0" />
+      <point x="26.5" y="-14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.Filiere" target="ma.fst.universite.bean.Etudiant" relationship="TO_MANY">
+      <point x="-24.5" y="14.0" />
+      <point x="-5.75" y="160.0" />
+      <point x="-170.25" y="160.0" />
+      <point x="-28.5" y="-14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.Etudiant" target="ma.fst.universite.bean.Filiere" relationship="TO_MANY">
+      <point x="28.5" y="-14.0" />
+      <point x="-113.25" y="170.0" />
+      <point x="43.25" y="170.0" />
+      <point x="24.5" y="14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.NoteModule" target="ma.fst.universite.bean.NoteSemestre" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="212.0" y="336.0" />
+      <point x="82.25" y="336.0" />
+      <point x="82.25" y="296.0" />
+      <point x="43.25" y="296.0" />
+      <point x="40.5" y="14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.Filiere" target="ma.fst.universite.bean.InscriptionSemestre" relationship="TO_MANY">
+      <point x="-24.5" y="14.0" />
+      <point x="-5.75" y="150.0" />
+      <point x="-213.75" y="150.0" />
+      <point x="-213.75" y="306.0" />
+      <point x="61.75" y="306.0" />
+      <point x="61.75" y="418.0" />
+      <point x="41.75" y="418.0" />
+      <point x="41.75" y="477.0" />
+      <point x="-91.25" y="477.0" />
+      <point x="51.25" y="-14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.InscriptionSemestre" target="ma.fst.universite.bean.Filiere" relationship="TO_MANY">
+      <point x="-51.25" y="-14.0" />
+      <point x="-193.75" y="482.0" />
+      <point x="-133.75" y="482.0" />
+      <point x="-133.75" y="467.0" />
+      <point x="424.0" y="467.0" />
+      <point x="424.0" y="184.0" />
+      <point x="43.25" y="184.0" />
+      <point x="24.5" y="14.0" />
+    </edge>
+    <edge source="ma.fst.universite.bean.Etudiant" target="ma.fst.universite.bean.Faculte" relationship="TO_ONE">
+      <point x="28.5" y="-14.0" />
+      <point x="-113.25" y="92.0" />
+      <point x="-117.25" y="92.0" />
+      <point x="26.5" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.0884244372990353" showDependencies="true" x="99.5" y="243.00000000000006" />
+  <SelectedNodes>
+    <node>ma.fst.universite.bean.InscriptionSemestre</node>
+    <node>ma.fst.universite.bean.NoteModule</node>
+    <node>ma.fst.universite.bean.Faculte</node>
+    <node>ma.fst.universite.bean.Etudiant</node>
+    <node>ma.fst.universite.bean.Semestre</node>
+    <node>ma.fst.universite.bean.NoteSemestre</node>
+    <node>ma.fst.universite.bean.Module</node>
+    <node>ma.fst.universite.bean.Filiere</node>
+    <node>ma.fst.universite.bean.InscriptionModule</node>
+    <node>ma.fst.universite.bean.SemestreModule</node>
+    <node>ma.fst.universite.bean.Universite</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
